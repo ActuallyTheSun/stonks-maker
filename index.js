@@ -35,10 +35,10 @@ bot.on("message", msg => {
     const moneydropped = Math.floor(Math.random() * 50 + 1)
     msg.channel.send(new Discord.MessageEmbed().setTitle("Money!").setColor("0x00008B").setDescription(`${moneydropped} dogecoin  have been dropped! React fast to get them!`))
 		.then(embed => {
-      const emoji = bot.emojis.cache.get("739752387706748929")
+      const emoji = "🥇" //need a placeholder for the custom emoji
       embed.react(emoji)
 			const filter = (reaction, user) => {
-	return [emoji.name].includes(reaction.emoji.name) && user != bot.user
+	return ["🥇"].includes(reaction.emoji.name) && user != bot.user
 };
 
 embed.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
