@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 const fs = require("fs")
 const moment = require("moment")
-const keepAlive = require('./server.js');
 const bot = new Discord.Client({ ws: { intents: Discord.Intents.ALL } })
 bot.commands = new Discord.Collection()
 const cooldowns = new Discord.Collection();
