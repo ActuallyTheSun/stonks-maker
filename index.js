@@ -38,7 +38,7 @@ bot.on("message", msg => {
       const emoji = "🥇" //need a placeholder for the custom emoji
       embed.react(emoji)
 			const filter = (reaction, user) => {
-	return ["🥇"].includes(reaction.emoji.name) && user != bot.user
+	return ["🥇"].includes(reaction.emoji.name) && user != bot.user && coins[user.id]
 };
 
 embed.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
