@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 const fs = require("fs")
 const moment = require("moment")
+const config = require("./config.json")
 const bot = new Discord.Client({ ws: { intents: Discord.Intents.ALL } })
 bot.commands = new Discord.Collection()
 const cooldowns = new Discord.Collection();
@@ -178,5 +179,4 @@ ${e}\`\`\``))
 }
 })
 
-bot.login(process.env.TOKEN)
-//addint this comment because i accidentaly pushed on the wrong account
+bot.login(config.token)
